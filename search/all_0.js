@@ -1,0 +1,28 @@
+var searchData=
+[
+  ['_5feax_0',['_EAX',['../switch__i386_8h.html#a77ba87c7ac6938020d7a2ba2a44abc28',1,'switch_i386.h']]],
+  ['_5febp_1',['_EBP',['../switch__i386_8h.html#a20c04f5219ffd830e36a8a7a4f13bb8a',1,'switch_i386.h']]],
+  ['_5febx_2',['_EBX',['../switch__i386_8h.html#a6ab40e94e232107f0fb0566413f44f56',1,'switch_i386.h']]],
+  ['_5fecx_3',['_ECX',['../switch__i386_8h.html#a69fd7dd62e6b177f9082f3b50624e83d',1,'switch_i386.h']]],
+  ['_5fedi_4',['_EDI',['../switch__i386_8h.html#a7b0f8ecc32a663c2ca063bc939bd9b9e',1,'switch_i386.h']]],
+  ['_5fedx_5',['_EDX',['../switch__i386_8h.html#a066646114b18335216703f7c04a4374a',1,'switch_i386.h']]],
+  ['_5fesi_6',['_ESI',['../switch__i386_8h.html#ae7a4a08fff30b7c990f853cd663d9c34',1,'switch_i386.h']]],
+  ['_5fesp_7',['_ESP',['../switch__i386_8h.html#a61e14bcb233700cbace941f558f4f89b',1,'switch_i386.h']]],
+  ['_5fpc_8',['_PC',['../switch__i386_8h.html#a337a9584866697ee4453fe7822b7e8e4',1,'_PC():&#160;switch_i386.h'],['../switch__x86-64_8h.html#a337a9584866697ee4453fe7822b7e8e4',1,'_PC():&#160;switch_x86-64.h']]],
+  ['_5fr10_9',['_R10',['../switch__x86-64_8h.html#a135e9664b08c730f12eedd2bc953e6ee',1,'switch_x86-64.h']]],
+  ['_5fr11_10',['_R11',['../switch__x86-64_8h.html#aa712c81ddaac0cd2576eca5bacc9db1f',1,'switch_x86-64.h']]],
+  ['_5fr12_11',['_R12',['../switch__x86-64_8h.html#a19f93f3b89db4a01eb8f0451427988d3',1,'switch_x86-64.h']]],
+  ['_5fr13_12',['_R13',['../switch__x86-64_8h.html#ad478116ae630f6da7263b929af1a8400',1,'switch_x86-64.h']]],
+  ['_5fr14_13',['_R14',['../switch__x86-64_8h.html#a8fc70c7b38da7fb994bff442fac002fd',1,'switch_x86-64.h']]],
+  ['_5fr15_14',['_R15',['../switch__x86-64_8h.html#a2b81c7ad75e3c7244487e0044881cfb2',1,'switch_x86-64.h']]],
+  ['_5fr8_15',['_R8',['../switch__x86-64_8h.html#a7adae1a4ed69aed687eebeef42dd91e4',1,'switch_x86-64.h']]],
+  ['_5fr9_16',['_R9',['../switch__x86-64_8h.html#ae45542133840a6d3673a4a08ca174727',1,'switch_x86-64.h']]],
+  ['_5frax_17',['_RAX',['../switch__x86-64_8h.html#abb5b10947961cb2c09058392808a9be5',1,'switch_x86-64.h']]],
+  ['_5frbp_18',['_RBP',['../switch__x86-64_8h.html#aa3516c64ec7a3bb6fba8320aba7573e4',1,'switch_x86-64.h']]],
+  ['_5frbx_19',['_RBX',['../switch__x86-64_8h.html#a5b26d62d79007953f5f6283f606af13c',1,'switch_x86-64.h']]],
+  ['_5frcx_20',['_RCX',['../switch__x86-64_8h.html#a5b7db0244d23cd0647bbd41030324a35',1,'switch_x86-64.h']]],
+  ['_5frdi_21',['_RDI',['../switch__x86-64_8h.html#adc42be7145e8b2befa2689d6cd0b1b59',1,'switch_x86-64.h']]],
+  ['_5frdx_22',['_RDX',['../switch__x86-64_8h.html#afcbdc80c962c8b94b28cc59038bbaf87',1,'switch_x86-64.h']]],
+  ['_5frsi_23',['_RSI',['../switch__x86-64_8h.html#aabdcc6f6547421516c9996add8f25638',1,'switch_x86-64.h']]],
+  ['_5frsp_24',['_RSP',['../switch__x86-64_8h.html#ae4ca8427286a528ec33ef3592d1ade90',1,'switch_x86-64.h']]]
+];
