@@ -4,7 +4,7 @@ var searchData=
   ['b31_57',['B31',['../execute_8c.html#afdc567b0c27e0ab1541d5d23626e0bf8',1,'execute.c']]],
   ['bad_5fvaddr_5freg_58',['BAD_VADDR_REG',['../machine_8hh.html#abc6126af1d45847bc59afa0aa3216b04a2533b903a764456fe6827075e95f4171',1,'machine.hh']]],
   ['bcond_59',['BCOND',['../encoding_8hh.html#adf764cbdea00d65edcd07bb9953ad2b7a5142ca9df94fb01f33b32b163f79aa7c',1,'encoding.hh']]],
-  ['bitmap_60',['Bitmap',['../classBitmap.html#a3c30d355fe8f36a9bbbc04141eb1b6c0',1,'Bitmap::Bitmap()'],['../classBitmap.html',1,'Bitmap']]],
+  ['bitmap_60',['Bitmap',['../classBitmap.html',1,'Bitmap'],['../classBitmap.html#a3c30d355fe8f36a9bbbc04141eb1b6c0',1,'Bitmap::Bitmap()']]],
   ['bitmap_2ecc_61',['bitmap.cc',['../bitmap_8cc.html',1,'']]],
   ['bitmap_2ehh_62',['bitmap.hh',['../bitmap_8hh.html',1,'']]],
   ['bits_5fin_5fbyte_63',['BITS_IN_BYTE',['../utility_8hh.html#a94ee16c2d653cd98f086a5f7b8ea453d',1,'utility.hh']]],
@@ -44,9 +44,11 @@ var searchData=
   ['btulong_97',['btULong',['../syms_8h.html#af2cf009ce82344ac5dda9ef690e78626',1,'syms.h']]],
   ['btunion_98',['btUnion',['../syms_8h.html#a94e603c21c0bbe256fc216a5a5b2ea9f',1,'syms.h']]],
   ['btushort_99',['btUShort',['../syms_8h.html#a3a618028c3336adc171e0a3eae69a42e',1,'syms.h']]],
-  ['buffer_100',['buffer',['../classDebugger.html#a15322dc45e2335e58c0db4fbc6f9a180',1,'Debugger']]],
-  ['buffer_5fsize_101',['BUFFER_SIZE',['../classDebugger.html#a40ee82928c9cd1223e32a7441afe87f4',1,'Debugger']]],
-  ['bufferinit_102',['bufferInit',['../classDisk.html#a90d96204820fdafec55af216ef9bf023',1,'Disk']]],
-  ['bus_5ferror_5fexception_103',['BUS_ERROR_EXCEPTION',['../exception__type_8hh.html#a0e0f0f1661d7aeb71ed9698bff6c6383a906d29662d66d18c58aad120c4a7d7ce',1,'exception_type.hh']]],
-  ['bytetosector_104',['ByteToSector',['../classFileHeader.html#a4029e71591a45f88bee884bff4ad4e14',1,'FileHeader']]]
+  ['buffer_100',['Buffer',['../classBuffer.html',1,'']]],
+  ['buffer_101',['buffer',['../classDebugger.html#a15322dc45e2335e58c0db4fbc6f9a180',1,'Debugger::buffer()'],['../classChannel.html#a74dc995a71ffa57b7dc6d974c9473b1c',1,'Channel::buffer()']]],
+  ['buffer_102',['Buffer',['../classBuffer.html#a2200e92e4b7629cf0149e5a584163519',1,'Buffer']]],
+  ['buffer_5fsize_103',['BUFFER_SIZE',['../classDebugger.html#a40ee82928c9cd1223e32a7441afe87f4',1,'Debugger::BUFFER_SIZE()'],['../thread__test__prod__cons_8cc.html#a4a4d61a03cfcdad2223210a1030a0fab',1,'BUFFER_SIZE():&#160;thread_test_prod_cons.cc']]],
+  ['bufferinit_104',['bufferInit',['../classDisk.html#a90d96204820fdafec55af216ef9bf023',1,'Disk']]],
+  ['bus_5ferror_5fexception_105',['BUS_ERROR_EXCEPTION',['../exception__type_8hh.html#a0e0f0f1661d7aeb71ed9698bff6c6383a906d29662d66d18c58aad120c4a7d7ce',1,'exception_type.hh']]],
+  ['bytetosector_106',['ByteToSector',['../classFileHeader.html#a4029e71591a45f88bee884bff4ad4e14',1,'FileHeader']]]
 ];

@@ -75,9 +75,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aeef00ecb5eda30734cff97a0ac492bdd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#aeef00ecb5eda30734cff97a0ac492bdd">Thread</a> (const char *debugName)</td></tr>
-<tr class="memdesc:aeef00ecb5eda30734cff97a0ac492bdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a <code><a class="el" href="classThread.html">Thread</a></code>.  <a href="classThread.html#aeef00ecb5eda30734cff97a0ac492bdd">More...</a><br /></td></tr>
-<tr class="separator:aeef00ecb5eda30734cff97a0ac492bdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a4f1862df9b8ea02719fcd643bca0c1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#a6a4f1862df9b8ea02719fcd643bca0c1">Thread</a> (const char *debugName, bool <a class="el" href="classThread.html#a744426869ce441c521f83784ee54924b">joinable</a>=true, int <a class="el" href="classThread.html#a85e6d6cd402deebcc79777e46351bafe">priority</a>=<a class="el" href="thread_8hh.html#aba00721c507326ce9ba597c6e7400e3c">MAX_PRIORITY</a>)</td></tr>
+<tr class="memdesc:a6a4f1862df9b8ea02719fcd643bca0c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a <code><a class="el" href="classThread.html">Thread</a></code>.  <a href="classThread.html#a6a4f1862df9b8ea02719fcd643bca0c1">More...</a><br /></td></tr>
+<tr class="separator:a6a4f1862df9b8ea02719fcd643bca0c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37d9edd3a1a776cbc27dedff949c9726"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#a37d9edd3a1a776cbc27dedff949c9726">~Thread</a> ()</td></tr>
 <tr class="separator:a37d9edd3a1a776cbc27dedff949c9726"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91faf5d41cbf54162b433586aceecec7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#a91faf5d41cbf54162b433586aceecec7">Fork</a> (<a class="el" href="utility_8hh.html#ab47fc30e09b543c1f1a5761c615f9afd">VoidFunctionPtr</a> func, void *arg)</td></tr>
@@ -89,6 +89,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a187a4c1e62087511b69068220840244a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#a187a4c1e62087511b69068220840244a">Sleep</a> ()</td></tr>
 <tr class="memdesc:a187a4c1e62087511b69068220840244a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put the thread to sleep and relinquish the processor.  <a href="classThread.html#a187a4c1e62087511b69068220840244a">More...</a><br /></td></tr>
 <tr class="separator:a187a4c1e62087511b69068220840244a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae753f58f6fd1745f6f0f5baba784f4d1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#ae753f58f6fd1745f6f0f5baba784f4d1">Join</a> ()</td></tr>
+<tr class="separator:ae753f58f6fd1745f6f0f5baba784f4d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e43c788c40e9783311c970bcea7239b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#a1e43c788c40e9783311c970bcea7239b">Finish</a> ()</td></tr>
 <tr class="memdesc:a1e43c788c40e9783311c970bcea7239b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The thread is done executing.  <a href="classThread.html#a1e43c788c40e9783311c970bcea7239b">More...</a><br /></td></tr>
 <tr class="separator:a1e43c788c40e9783311c970bcea7239b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -101,6 +103,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aad203911be97386be2a33af241850c17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9f3f6232bdf0667802ad213e920506a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#af9f3f6232bdf0667802ad213e920506a">Print</a> () const</td></tr>
 <tr class="separator:af9f3f6232bdf0667802ad213e920506a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abba2f0c466c70fc44935ed2ef3e09f82"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#abba2f0c466c70fc44935ed2ef3e09f82">GetRealPriority</a> ()</td></tr>
+<tr class="separator:abba2f0c466c70fc44935ed2ef3e09f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab589d5342bfae4d47420fce8c02948f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#ab589d5342bfae4d47420fce8c02948f7">GetPriority</a> ()</td></tr>
+<tr class="separator:ab589d5342bfae4d47420fce8c02948f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a728f17b7ed1db5afb270482b7423e5fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#a728f17b7ed1db5afb270482b7423e5fe">SetPriority</a> (int <a class="el" href="classThread.html#a85e6d6cd402deebcc79777e46351bafe">priority</a>)</td></tr>
+<tr class="separator:a728f17b7ed1db5afb270482b7423e5fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a705169f774fd9744d0a88b78e5397599"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#a705169f774fd9744d0a88b78e5397599">ResetPriority</a> ()</td></tr>
+<tr class="separator:a705169f774fd9744d0a88b78e5397599"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -116,6 +126,12 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ae186e09a24111f5af27bbe1b8db765a5"><td class="memItemLeft" align="right" valign="top">uintptr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#ae186e09a24111f5af27bbe1b8db765a5">machineState</a> [<a class="el" href="thread_8hh.html#ae846b80489cd7b16bc2858333ab298d9">MACHINE_STATE_SIZE</a>]</td></tr>
 <tr class="memdesc:ae186e09a24111f5af27bbe1b8db765a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">All registers except for <code>stackTop</code>.  <a href="classThread.html#ae186e09a24111f5af27bbe1b8db765a5">More...</a><br /></td></tr>
 <tr class="separator:ae186e09a24111f5af27bbe1b8db765a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a283a91c94c0922af9bf7aef5b9cca690"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classChannel.html">Channel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#a283a91c94c0922af9bf7aef5b9cca690">channel</a></td></tr>
+<tr class="separator:a283a91c94c0922af9bf7aef5b9cca690"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85e6d6cd402deebcc79777e46351bafe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#a85e6d6cd402deebcc79777e46351bafe">priority</a></td></tr>
+<tr class="separator:a85e6d6cd402deebcc79777e46351bafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19d2e4300c2914d501b59611953b2af6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#a19d2e4300c2914d501b59611953b2af6">realPriority</a></td></tr>
+<tr class="separator:a19d2e4300c2914d501b59611953b2af6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cd55fb5c3042f188757bfed87e42749"><td class="memItemLeft" align="right" valign="top">uintptr_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#a5cd55fb5c3042f188757bfed87e42749">stack</a></td></tr>
 <tr class="separator:a5cd55fb5c3042f188757bfed87e42749"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3855378e2bbc5f325c759c87d4b6b068"><td class="memItemLeft" align="right" valign="top"><a class="el" href="thread_8hh.html#ae2739961013a00cede621d4d72f2173c">ThreadStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#a3855378e2bbc5f325c759c87d4b6b068">status</a></td></tr>
@@ -123,6 +139,8 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a3855378e2bbc5f325c759c87d4b6b068"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf8367c62ce6a746d82304600cbd2f9c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#adf8367c62ce6a746d82304600cbd2f9c">name</a></td></tr>
 <tr class="separator:adf8367c62ce6a746d82304600cbd2f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a744426869ce441c521f83784ee54924b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThread.html#a744426869ce441c521f83784ee54924b">joinable</a></td></tr>
+<tr class="separator:a744426869ce441c521f83784ee54924b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The following class defines a “thread control block” &ndash; which represents a single thread of execution.</p>
@@ -134,8 +152,8 @@ Private Attributes</h2></td></tr>
 </li>
 </ul>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aeef00ecb5eda30734cff97a0ac492bdd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeef00ecb5eda30734cff97a0ac492bdd">&#9670;&nbsp;</a></span>Thread()</h2>
+<a id="a6a4f1862df9b8ea02719fcd643bca0c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a4f1862df9b8ea02719fcd643bca0c1">&#9670;&nbsp;</a></span>Thread()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -144,8 +162,24 @@ Private Attributes</h2></td></tr>
           <td class="memname">Thread::Thread </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>threadName</em></td><td>)</td>
+          <td class="paramname"><em>threadName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>joinable_</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>priority_</em> = <code><a class="el" href="thread_8hh.html#aba00721c507326ce9ba597c6e7400e3c">MAX_PRIORITY</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -284,6 +318,57 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ab589d5342bfae4d47420fce8c02948f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab589d5342bfae4d47420fce8c02948f7">&#9670;&nbsp;</a></span>GetPriority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Thread::GetPriority </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abba2f0c466c70fc44935ed2ef3e09f82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abba2f0c466c70fc44935ed2ef3e09f82">&#9670;&nbsp;</a></span>GetRealPriority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Thread::GetRealPriority </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae753f58f6fd1745f6f0f5baba784f4d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae753f58f6fd1745f6f0f5baba784f4d1">&#9670;&nbsp;</a></span>Join()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Thread::Join </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af9f3f6232bdf0667802ad213e920506a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af9f3f6232bdf0667802ad213e920506a">&#9670;&nbsp;</a></span>Print()</h2>
 
@@ -295,6 +380,41 @@ Private Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a705169f774fd9744d0a88b78e5397599"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a705169f774fd9744d0a88b78e5397599">&#9670;&nbsp;</a></span>ResetPriority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Thread::ResetPriority </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a728f17b7ed1db5afb270482b7423e5fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a728f17b7ed1db5afb270482b7423e5fe">&#9670;&nbsp;</a></span>SetPriority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Thread::SetPriority </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>priority</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -414,6 +534,50 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a283a91c94c0922af9bf7aef5b9cca690"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a283a91c94c0922af9bf7aef5b9cca690">&#9670;&nbsp;</a></span>channel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classChannel.html">Channel</a>* Thread::channel</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a744426869ce441c521f83784ee54924b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a744426869ce441c521f83784ee54924b">&#9670;&nbsp;</a></span>joinable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Thread::joinable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ae186e09a24111f5af27bbe1b8db765a5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae186e09a24111f5af27bbe1b8db765a5">&#9670;&nbsp;</a></span>machineState</h2>
 
@@ -449,6 +613,50 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">const char* Thread::name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a85e6d6cd402deebcc79777e46351bafe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85e6d6cd402deebcc79777e46351bafe">&#9670;&nbsp;</a></span>priority</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Thread::priority</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19d2e4300c2914d501b59611953b2af6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19d2e4300c2914d501b59611953b2af6">&#9670;&nbsp;</a></span>realPriority</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Thread::realPriority</td>
         </tr>
       </table>
   </td>

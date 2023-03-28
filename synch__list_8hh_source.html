@@ -110,8 +110,8 @@ $(function() {
 <div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classSynchList.html#a429a84c573917b913127c1ff2d926f1c">   64</a></span>&#160;<a class="code" href="classSynchList.html#a429a84c573917b913127c1ff2d926f1c">SynchList&lt;Item&gt;::SynchList</a>()</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    list      = <span class="keyword">new</span> <a class="code" href="classList.html">List&lt;Item&gt;</a>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    lock      = <span class="keyword">new</span> <a class="code" href="classLock.html">Lock</a>(<span class="stringliteral">&quot;list lock&quot;</span>);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    listEmpty = <span class="keyword">new</span> <a class="code" href="classCondition.html">Condition</a>(<span class="stringliteral">&quot;list empty cond&quot;</span>, lock);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="thread__test__priority__inversion_8cc.html#af35dc9a518c706bd22927d05a0801458">lock</a>      = <span class="keyword">new</span> <a class="code" href="classLock.html">Lock</a>(<span class="stringliteral">&quot;list lock&quot;</span>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    listEmpty = <span class="keyword">new</span> <a class="code" href="classCondition.html">Condition</a>(<span class="stringliteral">&quot;list empty cond&quot;</span>, <a class="code" href="thread__test__priority__inversion_8cc.html#af35dc9a518c706bd22927d05a0801458">lock</a>);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">// original // listEmpty = new Condition(&quot;list empty cond&quot;);</span></div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
@@ -119,7 +119,7 @@ $(function() {
 <div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classSynchList.html#addb7ec22037032c9eceaa726eb033ca8">   74</a></span>&#160;<a class="code" href="classSynchList.html#addb7ec22037032c9eceaa726eb033ca8">SynchList&lt;Item&gt;::~SynchList</a>()</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">delete</span> list;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">delete</span> lock;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keyword">delete</span> <a class="code" href="thread__test__priority__inversion_8cc.html#af35dc9a518c706bd22927d05a0801458">lock</a>;</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">delete</span> listEmpty;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
@@ -127,11 +127,11 @@ $(function() {
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keywordtype">void</span></div>
 <div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="classSynchList.html#a54c97119ca793c7480a7f53595ed02e4">   87</a></span>&#160;<a class="code" href="classSynchList.html#a54c97119ca793c7480a7f53595ed02e4">SynchList&lt;Item&gt;::Append</a>(Item item)</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    lock-&gt;Acquire();      <span class="comment">// Enforce mutual exclusive access to the list.</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="thread__test__priority__inversion_8cc.html#af35dc9a518c706bd22927d05a0801458">lock</a>-&gt;<a class="code" href="classLock.html#ad4c4699fd1ab73f3927b10edc01c54db">Acquire</a>();      <span class="comment">// Enforce mutual exclusive access to the list.</span></div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    list-&gt;Append(item);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    listEmpty-&gt;Signal();  <span class="comment">// Wake up a waiter, if any.</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="comment">// original // listEmpty-&gt;Signal(lock);    // wake up a waiter, if any</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    lock-&gt;Release();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="thread__test__priority__inversion_8cc.html#af35dc9a518c706bd22927d05a0801458">lock</a>-&gt;<a class="code" href="classLock.html#a5ca005b84272e56c2bf447056ee9217c">Release</a>();</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">class</span> Item&gt;</div>
@@ -140,14 +140,14 @@ $(function() {
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    Item item;</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    lock-&gt;Acquire();    <span class="comment">// Enforce mutual exclusion.</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="thread__test__priority__inversion_8cc.html#af35dc9a518c706bd22927d05a0801458">lock</a>-&gt;<a class="code" href="classLock.html#ad4c4699fd1ab73f3927b10edc01c54db">Acquire</a>();    <span class="comment">// Enforce mutual exclusion.</span></div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">while</span> (list-&gt;IsEmpty()) {</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        listEmpty-&gt;Wait();  <span class="comment">// Wait until list is not empty.</span></div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">// Original: //listEmpty-&gt;Wait(lock);  // Wait until list is not empty.</span></div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    item = list-&gt;Pop();</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="comment">//ASSERT(item != nullptr);</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    lock-&gt;Release();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="thread__test__priority__inversion_8cc.html#af35dc9a518c706bd22927d05a0801458">lock</a>-&gt;<a class="code" href="classLock.html#a5ca005b84272e56c2bf447056ee9217c">Release</a>();</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">return</span> item;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
@@ -156,9 +156,9 @@ $(function() {
 <div class="line"><a name="l00124"></a><span class="lineno"><a class="line" href="classSynchList.html#aabffbb4cf5b875e1015fe2565c8d485b">  124</a></span>&#160;<a class="code" href="classSynchList.html#aabffbb4cf5b875e1015fe2565c8d485b">SynchList&lt;Item&gt;::Apply</a>(<span class="keywordtype">void</span> (*func)(Item))</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;{</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <a class="code" href="assert_8hh.html#ac22830a985e1daed0c9eadba8c6f606e">ASSERT</a>(func != <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    lock-&gt;Acquire();</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="thread__test__priority__inversion_8cc.html#af35dc9a518c706bd22927d05a0801458">lock</a>-&gt;<a class="code" href="classLock.html#ad4c4699fd1ab73f3927b10edc01c54db">Acquire</a>();</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    list-&gt;Apply(func);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    lock-&gt;Release();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="thread__test__priority__inversion_8cc.html#af35dc9a518c706bd22927d05a0801458">lock</a>-&gt;<a class="code" href="classLock.html#a5ca005b84272e56c2bf447056ee9217c">Release</a>();</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
@@ -166,7 +166,9 @@ $(function() {
 <div class="ttc" id="aassert_8hh_html_ac22830a985e1daed0c9eadba8c6f606e"><div class="ttname"><a href="assert_8hh.html#ac22830a985e1daed0c9eadba8c6f606e">ASSERT</a></div><div class="ttdeci">#define ASSERT(condition)</div><div class="ttdef"><b>Definition:</b> assert.hh:16</div></div>
 <div class="ttc" id="aclassCondition_html"><div class="ttname"><a href="classCondition.html">Condition</a></div><div class="ttdef"><b>Definition:</b> condition.hh:56</div></div>
 <div class="ttc" id="aclassList_html"><div class="ttname"><a href="classList.html">List</a></div><div class="ttdef"><b>Definition:</b> list.hh:41</div></div>
-<div class="ttc" id="aclassLock_html"><div class="ttname"><a href="classLock.html">Lock</a></div><div class="ttdef"><b>Definition:</b> lock.hh:32</div></div>
+<div class="ttc" id="aclassLock_html"><div class="ttname"><a href="classLock.html">Lock</a></div><div class="ttdef"><b>Definition:</b> lock.hh:36</div></div>
+<div class="ttc" id="aclassLock_html_a5ca005b84272e56c2bf447056ee9217c"><div class="ttname"><a href="classLock.html#a5ca005b84272e56c2bf447056ee9217c">Lock::Release</a></div><div class="ttdeci">void Release()</div><div class="ttdef"><b>Definition:</b> lock.cc:61</div></div>
+<div class="ttc" id="aclassLock_html_ad4c4699fd1ab73f3927b10edc01c54db"><div class="ttname"><a href="classLock.html#ad4c4699fd1ab73f3927b10edc01c54db">Lock::Acquire</a></div><div class="ttdeci">void Acquire()</div><div class="ttdef"><b>Definition:</b> lock.cc:43</div></div>
 <div class="ttc" id="aclassSynchList_html"><div class="ttname"><a href="classSynchList.html">SynchList</a></div><div class="ttdef"><b>Definition:</b> synch_list.hh:26</div></div>
 <div class="ttc" id="aclassSynchList_html_a1a251b17e28a0b78336fcdc1ab40a6cd"><div class="ttname"><a href="classSynchList.html#a1a251b17e28a0b78336fcdc1ab40a6cd">SynchList::Pop</a></div><div class="ttdeci">Item Pop()</div><div class="ttdef"><b>Definition:</b> synch_list.hh:102</div></div>
 <div class="ttc" id="aclassSynchList_html_a429a84c573917b913127c1ff2d926f1c"><div class="ttname"><a href="classSynchList.html#a429a84c573917b913127c1ff2d926f1c">SynchList::SynchList</a></div><div class="ttdeci">SynchList()</div><div class="ttdoc">Initialize a synchronized list.</div><div class="ttdef"><b>Definition:</b> synch_list.hh:64</div></div>
@@ -178,6 +180,7 @@ $(function() {
 <div class="ttc" id="aclassSynchList_html_ade1aebd3cb12d43440a35b01a87602e1"><div class="ttname"><a href="classSynchList.html#ade1aebd3cb12d43440a35b01a87602e1">SynchList::lock</a></div><div class="ttdeci">Lock * lock</div><div class="ttdef"><b>Definition:</b> synch_list.hh:52</div></div>
 <div class="ttc" id="acondition_8hh_html"><div class="ttname"><a href="condition_8hh.html">condition.hh</a></div></div>
 <div class="ttc" id="alist_8hh_html"><div class="ttname"><a href="list_8hh.html">list.hh</a></div></div>
+<div class="ttc" id="athread__test__priority__inversion_8cc_html_af35dc9a518c706bd22927d05a0801458"><div class="ttname"><a href="thread__test__priority__inversion_8cc.html#af35dc9a518c706bd22927d05a0801458">lock</a></div><div class="ttdeci">Lock * lock</div><div class="ttdef"><b>Definition:</b> thread_test_priority_inversion.cc:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

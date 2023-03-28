@@ -74,7 +74,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a89e5c27b1c2bc66deab13d62cf6b312d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCondition.html#a89e5c27b1c2bc66deab13d62cf6b312d">Condition</a> (const char *debugName, <a class="el" href="classLock.html">Lock</a> *conditionLock)</td></tr>
+<tr class="memitem:a89e5c27b1c2bc66deab13d62cf6b312d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCondition.html#a89e5c27b1c2bc66deab13d62cf6b312d">Condition</a> (const char *debugName, <a class="el" href="classLock.html">Lock</a> *<a class="el" href="classCondition.html#a02518e9771606baa80bf59aa25a90fad">conditionLock</a>)</td></tr>
 <tr class="memdesc:a89e5c27b1c2bc66deab13d62cf6b312d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor: indicate which lock the condition variable belongs to.  <a href="classCondition.html#a89e5c27b1c2bc66deab13d62cf6b312d">More...</a><br /></td></tr>
 <tr class="separator:a89e5c27b1c2bc66deab13d62cf6b312d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab42f6d2dfb2d0de4bed4ed5032d4a8fc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCondition.html#ab42f6d2dfb2d0de4bed4ed5032d4a8fc">~Condition</a> ()</td></tr>
@@ -92,6 +92,18 @@ Public Member Functions</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a8938b4b1f026d03713a654857b39e495"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCondition.html#a8938b4b1f026d03713a654857b39e495">name</a></td></tr>
 <tr class="separator:a8938b4b1f026d03713a654857b39e495"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa76baed771fa5e67541e22f29beeaa20"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCondition.html#aa76baed771fa5e67541e22f29beeaa20">semName</a></td></tr>
+<tr class="separator:aa76baed771fa5e67541e22f29beeaa20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af87b8f2888d078ffd1dca5fcd6a1419e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCondition.html#af87b8f2888d078ffd1dca5fcd6a1419e">lockName</a></td></tr>
+<tr class="separator:af87b8f2888d078ffd1dca5fcd6a1419e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21e1d3d78c47b9ee1a54c07eac0ffe25"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCondition.html#a21e1d3d78c47b9ee1a54c07eac0ffe25">waiting</a> = 0</td></tr>
+<tr class="separator:a21e1d3d78c47b9ee1a54c07eac0ffe25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6ff1294dd09db66043fde4c42242474"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLock.html">Lock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCondition.html#ad6ff1294dd09db66043fde4c42242474">waitingLock</a></td></tr>
+<tr class="separator:ad6ff1294dd09db66043fde4c42242474"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaeada406402b7014751fc32b1226aeff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSemaphore.html">Semaphore</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCondition.html#aaeada406402b7014751fc32b1226aeff">signal</a></td></tr>
+<tr class="separator:aaeada406402b7014751fc32b1226aeff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02518e9771606baa80bf59aa25a90fad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classLock.html">Lock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCondition.html#a02518e9771606baa80bf59aa25a90fad">conditionLock</a></td></tr>
+<tr class="separator:a02518e9771606baa80bf59aa25a90fad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classCondition.html">Condition</a> variables, a synchronization primitive</p>
@@ -127,7 +139,7 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classLock.html">Lock</a> *&#160;</td>
-          <td class="paramname"><em>conditionLock</em>&#160;</td>
+          <td class="paramname"><em>conditionLock_</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -235,6 +247,50 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a02518e9771606baa80bf59aa25a90fad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02518e9771606baa80bf59aa25a90fad">&#9670;&nbsp;</a></span>conditionLock</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLock.html">Lock</a>* Condition::conditionLock</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af87b8f2888d078ffd1dca5fcd6a1419e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af87b8f2888d078ffd1dca5fcd6a1419e">&#9670;&nbsp;</a></span>lockName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* Condition::lockName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a8938b4b1f026d03713a654857b39e495"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8938b4b1f026d03713a654857b39e495">&#9670;&nbsp;</a></span>name</h2>
 
@@ -246,6 +302,94 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">const char* Condition::name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa76baed771fa5e67541e22f29beeaa20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa76baed771fa5e67541e22f29beeaa20">&#9670;&nbsp;</a></span>semName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* Condition::semName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaeada406402b7014751fc32b1226aeff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaeada406402b7014751fc32b1226aeff">&#9670;&nbsp;</a></span>signal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSemaphore.html">Semaphore</a>* Condition::signal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a21e1d3d78c47b9ee1a54c07eac0ffe25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21e1d3d78c47b9ee1a54c07eac0ffe25">&#9670;&nbsp;</a></span>waiting</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Condition::waiting = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6ff1294dd09db66043fde4c42242474"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6ff1294dd09db66043fde4c42242474">&#9670;&nbsp;</a></span>waitingLock</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classLock.html">Lock</a>* Condition::waitingLock</td>
         </tr>
       </table>
   </td>

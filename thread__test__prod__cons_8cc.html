@@ -66,20 +66,79 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">thread_test_prod_cons.cc File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="thread__test__prod__cons_8hh_source.html">thread_test_prod_cons.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="lock_8hh_source.html">lock.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="condition_8hh_source.html">condition.hh</a>&quot;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
 </div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBuffer.html">Buffer&lt; Item &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a94cdbd5baa5d1d66b00a2163b3b80859"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread__test__prod__cons_8cc.html#a94cdbd5baa5d1d66b00a2163b3b80859">ProducerThread</a> (void *args)</td></tr>
+<tr class="separator:a94cdbd5baa5d1d66b00a2163b3b80859"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0070005b729ba4e6c7bafa41e379c2cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread__test__prod__cons_8cc.html#a0070005b729ba4e6c7bafa41e379c2cc">ConsumerThread</a> (void *args)</td></tr>
+<tr class="separator:a0070005b729ba4e6c7bafa41e379c2cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fdfee406758159593279e0a3c5c7ebf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread__test__prod__cons_8cc.html#a4fdfee406758159593279e0a3c5c7ebf">ThreadTestProdCons</a> ()</td></tr>
 <tr class="separator:a4fdfee406758159593279e0a3c5c7ebf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:af11445a94aeb5592ed300b4b861c6064"><td class="memItemLeft" align="right" valign="top">static const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread__test__prod__cons_8cc.html#af11445a94aeb5592ed300b4b861c6064">NUM_PRODUCERS</a> = 2</td></tr>
+<tr class="separator:af11445a94aeb5592ed300b4b861c6064"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cd6c9bf24963a3c4bf6d0d5ceed2b6d"><td class="memItemLeft" align="right" valign="top">static const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread__test__prod__cons_8cc.html#a2cd6c9bf24963a3c4bf6d0d5ceed2b6d">NUM_CONSUMERS</a> = 5</td></tr>
+<tr class="separator:a2cd6c9bf24963a3c4bf6d0d5ceed2b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a4d61a03cfcdad2223210a1030a0fab"><td class="memItemLeft" align="right" valign="top">static const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="thread__test__prod__cons_8cc.html#a4a4d61a03cfcdad2223210a1030a0fab">BUFFER_SIZE</a> = 20</td></tr>
+<tr class="separator:a4a4d61a03cfcdad2223210a1030a0fab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a0070005b729ba4e6c7bafa41e379c2cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0070005b729ba4e6c7bafa41e379c2cc">&#9670;&nbsp;</a></span>ConsumerThread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConsumerThread </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a94cdbd5baa5d1d66b00a2163b3b80859"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94cdbd5baa5d1d66b00a2163b3b80859">&#9670;&nbsp;</a></span>ProducerThread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ProducerThread </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a4fdfee406758159593279e0a3c5c7ebf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4fdfee406758159593279e0a3c5c7ebf">&#9670;&nbsp;</a></span>ThreadTestProdCons()</h2>
 
@@ -93,6 +152,74 @@ Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+<p>Copyright (c) 1992-1993 The Regents of the University of California. 2007-2009 Universidad de Las Palmas de Gran Canaria. 2016-2021 Docentes de la Universidad Nacional de Rosario. All rights reserved. See <code><a class="el" href="copyright_8h.html">copyright.h</a></code> for copyright notice and limitation of liability and disclaimer of warranty provisions. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a4a4d61a03cfcdad2223210a1030a0fab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a4d61a03cfcdad2223210a1030a0fab">&#9670;&nbsp;</a></span>BUFFER_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned BUFFER_SIZE = 20</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2cd6c9bf24963a3c4bf6d0d5ceed2b6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2cd6c9bf24963a3c4bf6d0d5ceed2b6d">&#9670;&nbsp;</a></span>NUM_CONSUMERS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned NUM_CONSUMERS = 5</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af11445a94aeb5592ed300b4b861c6064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af11445a94aeb5592ed300b4b861c6064">&#9670;&nbsp;</a></span>NUM_PRODUCERS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned NUM_PRODUCERS = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p>Copyright (c) 1992-1993 The Regents of the University of California. 2007-2009 Universidad de Las Palmas de Gran Canaria. 2016-2021 Docentes de la Universidad Nacional de Rosario. All rights reserved. See <code><a class="el" href="copyright_8h.html">copyright.h</a></code> for copyright notice and limitation of liability and disclaimer of warranty provisions. </p>
 

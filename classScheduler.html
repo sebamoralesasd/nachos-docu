@@ -91,11 +91,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a87205b0773d3dd84752ec779c890f5e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae82d9a7b506449c5a32d29b81e536076"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#ae82d9a7b506449c5a32d29b81e536076">Print</a> ()</td></tr>
 <tr class="separator:ae82d9a7b506449c5a32d29b81e536076"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c2522a4b268ca295a73def0ca9cb211"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#a6c2522a4b268ca295a73def0ca9cb211">SwitchPriority</a> (<a class="el" href="classThread.html">Thread</a> *thread, int priority)</td></tr>
+<tr class="separator:a6c2522a4b268ca295a73def0ca9cb211"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a52ffd805b58565651d2b1549ef4fcefd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classList.html">List</a>&lt; <a class="el" href="classThread.html">Thread</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#a52ffd805b58565651d2b1549ef4fcefd">readyList</a></td></tr>
-<tr class="separator:a52ffd805b58565651d2b1549ef4fcefd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70e9d6ed93a816d7363cdcadede20ee4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classList.html">List</a>&lt; <a class="el" href="classThread.html">Thread</a> * &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classScheduler.html#a70e9d6ed93a816d7363cdcadede20ee4">readyList</a> [<a class="el" href="thread_8hh.html#aba00721c507326ce9ba597c6e7400e3c">MAX_PRIORITY</a>+1]</td></tr>
+<tr class="separator:a70e9d6ed93a816d7363cdcadede20ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Data structures for the thread dispatcher and scheduler.</p>
@@ -238,9 +240,37 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a6c2522a4b268ca295a73def0ca9cb211"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c2522a4b268ca295a73def0ca9cb211">&#9670;&nbsp;</a></span>SwitchPriority()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scheduler::SwitchPriority </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classThread.html">Thread</a> *&#160;</td>
+          <td class="paramname"><em>thread</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>priority</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a52ffd805b58565651d2b1549ef4fcefd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52ffd805b58565651d2b1549ef4fcefd">&#9670;&nbsp;</a></span>readyList</h2>
+<a id="a70e9d6ed93a816d7363cdcadede20ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70e9d6ed93a816d7363cdcadede20ee4">&#9670;&nbsp;</a></span>readyList</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -249,7 +279,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classList.html">List</a>&lt;<a class="el" href="classThread.html">Thread</a>*&gt;* Scheduler::readyList</td>
+          <td class="memname"><a class="el" href="classList.html">List</a>&lt;<a class="el" href="classThread.html">Thread</a> *&gt;* Scheduler::readyList[<a class="el" href="thread_8hh.html#aba00721c507326ce9ba597c6e7400e3c">MAX_PRIORITY</a>+1]</td>
         </tr>
       </table>
   </td>

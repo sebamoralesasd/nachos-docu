@@ -94,6 +94,12 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a4fab518d5af485ba8c0a73e5467904dd"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLock.html#a4fab518d5af485ba8c0a73e5467904dd">name</a></td></tr>
 <tr class="memdesc:a4fab518d5af485ba8c0a73e5467904dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">For debugging.  <a href="classLock.html#a4fab518d5af485ba8c0a73e5467904dd">More...</a><br /></td></tr>
 <tr class="separator:a4fab518d5af485ba8c0a73e5467904dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c4a7da8e7d3974b7d84b310e7b2ef63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classThread.html">Thread</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLock.html#a4c4a7da8e7d3974b7d84b310e7b2ef63">owner</a></td></tr>
+<tr class="separator:a4c4a7da8e7d3974b7d84b310e7b2ef63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7643eccb6f964a10e6f3f537db7dace"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSemaphore.html">Semaphore</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLock.html#ac7643eccb6f964a10e6f3f537db7dace">semaphore</a></td></tr>
+<tr class="separator:ac7643eccb6f964a10e6f3f537db7dace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35e381cf9a1636bd6636158c5bdd4e78"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classLock.html#a35e381cf9a1636bd6636158c5bdd4e78">semName</a></td></tr>
+<tr class="separator:a35e381cf9a1636bd6636158c5bdd4e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Lock/Mutex, a synchronization primitive</p>
@@ -247,6 +253,72 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>For debugging. </p>
+
+</div>
+</div>
+<a id="a4c4a7da8e7d3974b7d84b310e7b2ef63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c4a7da8e7d3974b7d84b310e7b2ef63">&#9670;&nbsp;</a></span>owner</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classThread.html">Thread</a>* Lock::owner</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7643eccb6f964a10e6f3f537db7dace"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7643eccb6f964a10e6f3f537db7dace">&#9670;&nbsp;</a></span>semaphore</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSemaphore.html">Semaphore</a>* Lock::semaphore</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35e381cf9a1636bd6636158c5bdd4e78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e381cf9a1636bd6636158c5bdd4e78">&#9670;&nbsp;</a></span>semName</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* Lock::semName</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
